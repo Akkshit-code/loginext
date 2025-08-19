@@ -1,0 +1,27 @@
+
+CREATE DATABASE IF NOT EXISTS food_delivery;
+USE food_delivery;
+
+CREATE TABLE Customers (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    order_time INT,
+    travel_time INT
+);
+
+CREATE TABLE DeliveryBoys (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    available_from INT DEFAULT 0
+);
+
+INSERT INTO Customers (name, order_time, travel_time) VALUES
+('C1', 1, 10),
+('C2', 4, 20),
+('C3', 15, 5),
+('C4', 22, 20),
+('C5', 24, 10),
+('C6', 25, 10);
+
+INSERT INTO DeliveryBoys (name) VALUES
+('D1'), ('D2');

@@ -1,0 +1,37 @@
+# Food Delivery Simulation
+
+This project simulates a **food delivery assignment system** where multiple customers place orders, and delivery boys are assigned based on availability.
+If no delivery boy is available at the time of order, the customer receives `"No Food :-("`.
+
+---
+
+##  Problem Statement
+
+- There are **N customers** and **M delivery boys**.
+- Each customer order has:
+  - An **order time** (when the customer places the order).
+  - A **travel time** (time taken by the delivery boy to deliver the order).
+- Delivery boys:
+  - Each delivery boy starts as **free** at time `0`.
+  - When a delivery boy is assigned, he becomes available again only after completing the delivery.
+- Orders are assigned in the following way:
+  - The **first available delivery boy (lowest ID)** is assigned.
+  - If no delivery boy is available, the order fails (`No Food :-(`).
+
+---
+
+##  Input Format
+
+1. First line: `N,M`
+   - `N` = number of customers
+   - `M` = number of delivery boys
+
+2. Next `N` lines: `orderTime,travelTime`
+   - `orderTime` = time at which the order is placed
+   - `travelTime` = time taken for delivery
+
+---
+
+## Output Format
+
+For each customer:
